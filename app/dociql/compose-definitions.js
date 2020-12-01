@@ -1,10 +1,10 @@
-const graphql = require('graphql')
-const transform = require('graphql-json-schema');
+const graphql = require("graphql");
+const transform = require("graphql-json-schema");
 
-module.exports = function(graphQLSchema) {
-    const printedSchema = graphql.printSchema(graphQLSchema)
+module.exports = function (graphQLSchema) {
+  const printedSchema = graphql.printSchema(graphQLSchema);
 
-    const jsonSchema = transform(printedSchema)
+  const jsonSchema = transform(printedSchema);
 
-    return jsonSchema.definitions;
-}
+  return jsonSchema.definitions;
+};
